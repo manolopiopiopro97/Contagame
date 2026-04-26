@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas de Contabilidad - Juego de Memoria</title>
+    <link rel="stylesheet" href="juego anagramas.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🖼 Anagramas</h1>
+        <p class="subtitle">Encuentra las parejas relacionadas</p>
+        
+        <div class="stats">
+            <span>Movimientos: <strong id="moves">0</strong></span>
+            <span>Parejas: <strong id="pairs">0</strong>/8</span>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <!-- Las cartas se generan con JavaScript -->
+        </div>
+
+        <button class="restart-btn" onclick="initGame()">🔄 Nuevo Juego</button>
+    </div>
+
+    <script src="juego anagramas.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IVA - ContaGame</title>
+  <link rel="stylesheet" href="calculadora-iva-formulario.css">
+</head>
+<body>
+  <img src="WhatsApp_Image_2026-04-23_at_8.44.26_PM-removebg-preview.png" alt="Logo ContaGame" class="logo-esquina">
+  
+  <div class="container">
+    <h1>💰 Calculadora de IVA</h1>
+
+    <div class="card-iva">
+      <div class="titulo-card">Calcula el IVA de tu valor</div>
+
+      <!-- Porcentaje IVA -->
+      <div class="form-group">
+        <label>Porcentaje de IVA (%)</label>
+        <input type="number" id="iva-porcentaje" value="19" min="0" max="100" step="0.1" placeholder="19">
+      </div>
+
+      <!-- Valor input -->
+      <div class="form-group">
+        <label>Ingresa el valor</label>
+        <input type="number" id="valor-input" placeholder="0" step="0.01">
+      </div>
+
+      <!-- Tipo de cálculo -->
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" name="iva-tipo" id="iva-incluido" value="incluido" checked>
+          <label for="iva-incluido">💰 IVA Incluido</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="iva-tipo" id="iva-excluido" value="excluido">
+          <label for="iva-excluido">📝 IVA No Incluido</label>
+        </div>
+      </div>
+
+      <!-- Botón calcular -->
+      <button class="btn-calcular" onclick="calcularIVA()">Calcular IVA</button>
+
+      <!-- Resultados -->
+      <div class="resultados" id="resultados" style="display: none;">
+        <div class="resultado-item">
+          <span class="resultado-label">Valor sin IVA:</span>
+          <span class="resultado-value" id="valor-sin-iva">$0.00</span>
+        </div>
+        <div class="resultado-item">
+          <span class="resultado-label">IVA:</span>
+          <span class="resultado-value" id="valor-iva">$0.00</span>
+        </div>
+        <div class="resultado-item destaque">
+          <span class="resultado-label">Total:</span>
+          <span class="resultado-value" id="valor-total">$0.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón volver -->
+    <div style="text-align: center;">
+      <button class="btn-volver" onclick="history.back()">← Volver</button>
+    </div>
+  </div>
+
+  <script src="calculadora-iva-formulario.js"></script>
+</body>
+</html>

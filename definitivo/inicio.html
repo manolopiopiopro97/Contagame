@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inicio de App</title>
+  <style>
+    .logo-esquina {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 110px;
+      z-index: 1000;
+    }
+  </style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Cuadro grande principal */
+    .card-grande {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .titulo-cuadro {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Grid de cuadros pequeños */
+    .grid-cuadros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .cuadro-chico {
+      background: linear-gradient(145deg, #2a2a4a, #1e1e3a);
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cuadro-chico:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      border-color: rgba(100, 150, 255, 0.3);
+    }
+
+    .icono-cuadro {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .nombre-cuadro {
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Colores diferentes para cada cuadro grande */
+    .card-grande:nth-child(1) .icono-cuadro {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .card-grande:nth-child(2) .icono-cuadro {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    .card-grande:nth-child(3) .icono-cuadro {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    .card-grande:nth-child(4) .icono-cuadro {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+  </style>
+</head>
+<body>
+  <img src="WhatsApp_Image_2026-04-23_at_8.44.26_PM-removebg-preview.png" alt="Logo ContaGame" class="logo-esquina">
+  <div class="container">
+    <h1>Contagame</h1>
+
+    <!-- Cuadro Grande 1: Productos -->
+    <div class="card-grande">
+      <div class="titulo-cuadro">🎮juegos</div>
+      <div class="grid-cuadros">
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">🎆</div>
+          <div class="nombre-cuadro">account receipts</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">🎇</div>
+          <div class="nombre-cuadro">Móvils</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">✨</div>
+          <div class="nombre-cuadro">quiz</div>
+        </div>
+        <a href="juego anagramas.html" class="cuadro-chico" style="text-decoration: none; display: block;">
+          <div class="icono-cuadro">🖼</div>
+          <div class="nombre-cuadro">anagramas</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Cuadro Grande 2: Servicios -->
+    <div class="card-grande">
+      <div class="titulo-cuadro">📒conceptos</div>
+      <div class="grid-cuadros">
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">💸</div>
+          <div class="nombre-cuadro">contabilidad</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">💳</div>
+          <div class="nombre-cuadro">cuentas</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">📊</div>
+          <div class="nombre-cuadro">subcuentas</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">📋</div>
+          <div class="nombre-cuadro">codigos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuadro Grande 3: Categorías -->
+    <div class="card-grande">
+      <div class="titulo-cuadro">🧾puc</div>
+      <div class="grid-cuadros">
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">📜</div>
+          <div class="nombre-cuadro">1105</div>
+          <div class="nombre-cuadro">caja</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">📜</div>
+          <div class="nombre-cuadro">4135</div>
+          <div class="nombre-cuadro">Ingresos</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">📜</div>
+          <div class="nombre-cuadro">110505</div>
+          <div class="nombre-cuadro">Efectivo</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">📜</div>
+          <div class="nombre-cuadro">413505</div>
+          <div class="nombre-cuadro">Comercio al por mayor y al detal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuadro Grande 4: Cuenta -->
+    <div class="card-grande">
+      <div class="titulo-cuadro">🛠herramientas</div>
+      <div class="grid-cuadros">
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">🎫</div>
+          <div class="nombre-cuadro">generador de asientos contables</div>
+        </div>
+        <a href="calculadora-iva-formulario.html" class="cuadro-chico" style="text-decoration: none; display: block;">
+          <div class="icono-cuadro">💰</div>
+          <div class="nombre-cuadro">calculadora de IVA</div>
+        </a>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">🧮</div>
+          <div class="nombre-cuadro">calculadora</div>
+        </div>
+        <div class="cuadro-chico">
+          <div class="icono-cuadro">🎰</div>
+          <div class="nombre-cuadro">puntos acumulados</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
